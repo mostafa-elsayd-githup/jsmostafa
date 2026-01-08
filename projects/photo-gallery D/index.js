@@ -17,12 +17,14 @@ async function fetchImage() {
     btnEl.style.display = "none";
     const loading = `<img src="spinner.svg" />`;
     galleryEl.innerHTML = loading;
+    
     await fetch(
       `https://api.unsplash.com/photos?per_page=${inputValue}&page=${Math.round(
         Math.random() * 1000
       )}&client_id=B8S3zB8gCPVCvzpAhCRdfXg_aki8PZM_q5pAyzDUvlc`
     ).then((res) =>
       res.json().then((data) => {
+        console.log(res)
         if (data) {
           data.forEach((pic) => {
             imgs += `

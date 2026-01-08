@@ -23,7 +23,7 @@ async function getJoke() {
     btnEl.disabled = false;
     btnEl.innerText = "Tell me a joke";
 
-    jokeEl.innerText = data[0].joke;
+    jokeEl.innerText = data[2].joke;
   } catch (error) {
     jokeEl.innerText = "An error happened, try again later";
     btnEl.disabled = false;
